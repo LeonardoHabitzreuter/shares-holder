@@ -1,7 +1,11 @@
 {
-  "name": "Sangria akka-http Example",
-  "description": "An example GraphQL server written with akka-http and sangria.",
-  "repository": "https://github.com/sangria-graphql/sangria-akka-http-example",
+  "name": "IFCPro-backend",
+  "description": "IFCPro server written with akka-http and sangria.",
+  "repository": "https://github.com/joseph-alexandre/IFCPro-backend",
   "logo": "https://raw.githubusercontent.com/sangria-graphql/sangria-logo/master/sangria-icon.png",
-  "keywords": ["scala", "sangria", "graphql"]
+  "keywords": [
+    "scala",
+    "sangria",
+    "graphql"
+  ]
 }
