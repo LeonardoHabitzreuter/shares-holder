@@ -13,3 +13,23 @@ sbt ~reStart
 ``` 
 
 you can run queries interactively using [graphql-playground](https://github.com/prisma/graphql-playground) by opening [http://localhost:8080](http://localhost:8080) in a browser.
+
+
+query {
+	project(filter: {
+		offset: Int
+		myProject: Boolean
+	}) {
+		image: String
+		name: String
+		description: String
+	}
+}
+
+query {
+	user {
+		name: String
+		country: String
+		state: String
+	}
+}
