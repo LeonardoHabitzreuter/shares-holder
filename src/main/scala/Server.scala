@@ -20,6 +20,7 @@ import scala.util.control.NonFatal
 import scala.util.{Failure, Success}
 import GraphQLRequestUnmarshaller._
 import sangria.slowlog.SlowLog
+import modules.project._
 
 object Server extends App with CorsSupport {
   implicit val system = ActorSystem("sangria-server")

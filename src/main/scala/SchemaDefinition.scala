@@ -1,5 +1,6 @@
 import sangria.execution.deferred.{Fetcher, HasId}
 import sangria.schema._
+import modules.project._
 
 import scala.concurrent.Future
 
@@ -54,11 +55,11 @@ object SchemaDefinition {
   val Query = ObjectType(
     "Query",
     fields[ProjectsRepo, Unit](
-      Field(
-        "project",
-        OptionType(Project),
-        arguments = OffsetArg :: Nil,
-        resolve = ctx ⇒ ctx.ctx.getProject(ctx arg OffsetArg)
+    Field(
+      "project",
+      OptionType(Project),
+      arguments = OffsetArg :: Nil,
+      resolve = ctx ⇒ ctx.ctx.getProject(ctx arg OffsetArg)
       )
     )
   )
