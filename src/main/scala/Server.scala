@@ -21,6 +21,7 @@ import scala.util.{Failure, Success}
 import GraphQLRequestUnmarshaller._
 import sangria.slowlog.SlowLog
 import modules.project._
+import TypeDefs._
 
 object Server extends App with CorsSupport {
   implicit val system = ActorSystem("sangria-server")
@@ -39,12 +40,10 @@ object Server extends App with CorsSupport {
         .execute(
           SchemaDefinition.ProjectsSchema,
           query,
-          new ProjectsRepo,
+          new SchemaDefinition.Context(new Mutation(), new Query()),
           variables = if (variables.isNull) Json.obj() else variables,
           operationName = operationName,
-          middleware = if (tracing) SlowLog.apolloTracing :: Nil else Nil,
-          deferredResolver =
-            DeferredResolver.fetchers(SchemaDefinition.projects)
+          middleware = if (tracing) SlowLog.apolloTracing :: Nil else Nil
         )
         .map(OK → _)
         .recover {
