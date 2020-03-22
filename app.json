@@ -1,7 +1,7 @@
 {
-  "name": "IFCPro-backend",
-  "description": "IFCPro server written with akka-http and sangria.",
-  "repository": "https://github.com/joseph-alexandre/IFCPro-backend",
+  "name": "shares-holder",
+  "description": "SharesHolder backend.",
+  "repository": "https://github.com/leonardohabitzreuter/shares-holder",
   "logo": "https://raw.githubusercontent.com/sangria-graphql/sangria-logo/master/sangria-icon.png",
   "keywords": [
     "scala",
