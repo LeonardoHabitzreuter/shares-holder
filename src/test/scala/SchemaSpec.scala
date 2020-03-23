@@ -13,7 +13,7 @@ import scala.concurrent.Await
 import scala.concurrent.duration._
 import scala.concurrent.ExecutionContext.Implicits.global
 
-import SchemaDefinition.StarWarsSchema
+import SchemaDefinition.SharesHolderSchema
 
 class SchemaSpec extends WordSpec with Matchers {
   "StartWars Schema" should {
@@ -81,11 +81,6 @@ class SchemaSpec extends WordSpec with Matchers {
   }
 
   def executeQuery(query: Document, vars: Json = Json.obj()) = {
-    val futureResult = Executor.execute(StarWarsSchema, query,
-      variables = vars,
-      userContext = new CharacterRepo,
-      deferredResolver = DeferredResolver.fetchers(SchemaDefinition.characters))
-
-    Await.result(futureResult, 10.seconds)
+    
   }
 }

@@ -14,8 +14,6 @@ class Query {
 class Mutation {
   @GraphQLField
   def createUser(email: String, password: String) = {
-    val user = User(email, password)
-
-    "1"
+    UserMutations.create(email=email, password=password)
   }
 }

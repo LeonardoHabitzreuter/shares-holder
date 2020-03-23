@@ -38,7 +38,7 @@ object Server extends App with CorsSupport {
     complete(
       Executor
         .execute(
-          SchemaDefinition.ProjectsSchema,
+          SchemaDefinition.SharesHolderSchema,
           query,
           new SchemaDefinition.Context(new Mutation(), new Query()),
           variables = if (variables.isNull) Json.obj() else variables,

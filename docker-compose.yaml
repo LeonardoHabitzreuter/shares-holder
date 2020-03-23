@@ -1,0 +1,11 @@
+version: "3"
+services:
+  db:
+    image: postgres:11.5-alpine
+    container_name: shares-holder-db
+    ports:
+      - 5432:5432
+    env_file:
+     - ./.env
+    volumes:
+      - ./volumes/data:/var/lib/postgresql/data

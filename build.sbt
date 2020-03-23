@@ -1,7 +1,7 @@
-name := "sangria-akka-http-example"
+name := "shares-holder"
 version := "0.1.0-SNAPSHOT"
 
-description := "An example GraphQL server written with akka-http, circe and sangria."
+description := "Shares holder."
 
 scalaVersion := "2.12.11"
 scalacOptions ++= Seq("-deprecation", "-feature")
@@ -18,6 +18,10 @@ libraryDependencies ++= Seq(
   "io.circe" %%	"circe-core" % "0.9.3",
   "io.circe" %% "circe-parser" % "0.9.3",
   "io.circe" %% "circe-optics" % "0.9.3",
+
+  "org.postgresql" % "postgresql" % "42.2.5",
+  "com.typesafe.slick" %% "slick" % "3.3.2",
+  "org.slf4j" % "slf4j-nop" % "1.7.10",
 
   "org.scalatest" %% "scalatest" % "3.0.5" % Test
 )

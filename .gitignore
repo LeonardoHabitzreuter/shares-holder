@@ -18,6 +18,9 @@ project/plugins/project/
 .idea
 .idea_modules
 
+# Env
+.env
+
 # Scala-IDE specific
 .scala_dependencies
 .worksheet

@@ -15,5 +15,5 @@ object SchemaDefinition {
   val MutationType = deriveContextObjectType[Context, Mutation, Unit](_.mutation)
   val QueryType = deriveContextObjectType[Context, Query, Unit](_.query)
 
-  val ProjectsSchema = Schema(QueryType, Some(MutationType))
+  val SharesHolderSchema = Schema(QueryType, Some(MutationType))
 }
